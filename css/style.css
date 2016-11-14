@@ -1,4 +1,15 @@
 body {
   background-color: #ccc; }
-  body h1 {
-    color: black; }
+  body .header {
+    background-color: #41a012;
+    color: #FFFFFF; }
+  body .landingPage i {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    background-color: #00bed8;
+    height: 50px;
+    width: 50px;
+    padding: 18px; }

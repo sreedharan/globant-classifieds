@@ -9,9 +9,13 @@
   "author": "Sreedharan",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.17.6",
+    "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-refresh": "^1.1.0",
-    "gulp-sass": "^2.3.2"
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
   }
 }

@@ -1,6 +1,30 @@
+$white: #FFFFFF;
+$black: #46616c;
+$blue: #00bed8;
+$green: #41a012;
+$orange: #ffad00;
+$red: #ff526e;
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
 body {
     background-color: #ccc;
-    h1 {
-        color: black;
+    .header {
+        background-color: $green;
+        color: $white;
+    }
+    .landingPage {
+        i {
+            @include border-radius(50%);
+            background-color: $blue;
+            height: 50px;
+            width: 50px;
+            padding: 18px;
+        }
     }
 }
