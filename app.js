@@ -16,6 +16,10 @@ app.config(function($routeProvider) {
     .otherwise({ redirectTo: '/home' });
 });
 
+app.controller('headerController', function($scope) {
+    $scope.isCollapsedHorizontal = true;
+});
+
 app.controller('landingController', function($scope) {
 
 });

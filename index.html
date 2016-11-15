@@ -17,23 +17,33 @@
 <body ng-app="classifiedsApp">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div ng-controller="headerController" class="col-lg-12">
                 <nav class="navbar header">
                     <div class="container-fluid">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="#">Logo</a>
+                            <a href="#"><i class="logo"></i></a>
                         </div>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <form class="form-inline float-xs-left">
                                     <input class="form-control" type="text" placeholder="Search">
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                    <i class="glyphicon glyphicon-search"></i>
                                 </form>
                             </li>
                             <li><a href="#"><i class="glyphicon glyphicon-star-empty"></i></a></li>
                             <li><a href="#">Creating List</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-align-justify"></i></a></li>
+                            <li><a href="javascript:void(0)" ng-click="isCollapsedHorizontal = !isCollapsedHorizontal"><i class="glyphicon glyphicon-align-justify"></i></a></li>
                         </ul>
+                        <div class="horizontal-collapse rightMenu" uib-collapse="isCollapsedHorizontal" horizontal>
+                            <ul>
+                                <li>Housing</li>
+                                <li>Automotive</li>
+                                <li>Furniture</li>
+                                <li>Electronics</li>
+                                <li>Household</li>
+                                <li>Other</li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -43,8 +53,10 @@
                 <div ng-view></div>
             </div>
         </div>
-        <div class="row text-center">
-            <div class="col-lg-12">footer text</div>
+        <div class="row text-center footer">
+            <div class="col-lg-12">
+                <h5>footer text</h5>
+            </div>
         </div>
     </div>
 
