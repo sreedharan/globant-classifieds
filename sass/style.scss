@@ -7,7 +7,6 @@ $red: #ff526e;
 $dark-blue: #34495e;
 $body-bg: #e0e1e5;
 $grey: #dcdcdc;
-$dark-blue: #2980b9;
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     border-radius: $radius;
@@ -45,44 +44,48 @@ body {
         .header {
             background-color: $green;
             @include border-radius(0);
-            .navbar-header {
-                padding: 10px 0;
-                .logo {
-                    background: url("images/logo.png") no-repeat 0 0;
-                    height: 40px;
-                    width: 170px;
-                    float: left;
-                }
-            }
-            .navbar-right {
+            .navbar-nav {
+                width: 100%;
+                text-align: center;
+                margin: 0 15px 0 0;
                 li {
-                    float: left;
-                    padding: 0 15px;
+                    float: none;
+                    display: inline-block;
+                    padding: 0;
+                }
+                .navbar-header {
+                    padding: 10px 0;
                     a {
-                        color: $white;
-                        line-height: 24px;
+                        float: left;
                         padding: 0;
-                        margin-top: 15px;
-                        &:hover,
-                        &:focus {
-                            background-color: $green;
-                        }
-                        i {
-                            color: $white;
-                            font-size: 22px;
+                        .logo {
+                            background: url("images/logo.png") no-repeat 0 0;
+                            height: 40px;
+                            width: 170px;
+                            float: left;
                         }
                     }
-                    form {
-                        background-color: $white;
-                        padding: 0 10px;
-                        width: 300px;
-                        @include border-radius(5px);
-                        margin-top: 12px;
-                        position: relative;
-                        input {
-                            width: 95%;
-                            border: none;
-                            padding-left: 0;
+                }
+                form {
+                    background-color: $white;
+                    padding: 0 10px;
+                    width: 300px;
+                    @include border-radius(5px);
+                    margin-top: 12px;
+                    position: relative;
+                    input {
+                        width: 95%;
+                        border: none;
+                        padding-left: 0;
+                        @include box-shadow(0,
+                        0,
+                        0,
+                        rgba(0,
+                        0,
+                        0,
+                        0.5));
+                        @include border-radius(0);
+                        &:focus {
                             @include box-shadow(0,
                             0,
                             0,
@@ -90,21 +93,32 @@ body {
                             0,
                             0,
                             0.5));
-                            @include border-radius(0);
-                            &:focus {
-                                @include box-shadow(0,
-                                0,
-                                0,
-                                rgba(0,
-                                0,
-                                0,
-                                0.5));
-                            }
                         }
-                        i {
-                            position: absolute;
-                            top: 10px;
-                            right: 10px;
+                    }
+                    i {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                    }
+                }
+                .navbar-right {
+                    margin-top: 18px;
+                    li {
+                        float: left;
+                        padding: 0 15px;
+                        a {
+                            color: $white;
+                            line-height: 24px;
+                            padding: 0;
+                            margin-top: 15px;
+                            &:hover,
+                            &:focus {
+                                background-color: $green;
+                            }
+                            i {
+                                color: $white;
+                                font-size: 22px;
+                            }
                         }
                     }
                 }
@@ -112,12 +126,55 @@ body {
             .rightMenu {
                 position: absolute;
                 top: 100%;
-                background-color: $black;
+                background-color: $dark-blue;
                 right: 0;
                 width: 200px;
                 color: $white;
                 opacity: 0.9;
                 z-index: 999;
+                .panel-group {
+                    margin-bottom: 0;
+                    .panel {
+                        background-color: transparent;
+                        @include border-radius(0);
+                        border-left: none;
+                        border-right: none;
+                        border-top: none;
+                        margin: 0;
+                        .panel-body {
+                            ul {
+                                padding: 0;
+                                list-style-type: none;
+                                li {
+                                    a {
+                                        float: left;
+                                        width: 100%;
+                                        padding: 5px 10px;
+                                        color: $white;
+                                        text-decoration: none;
+                                        &:hover {
+                                            background-color: $grey;
+                                            color: $black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.panel-open {
+                            .panel-body {
+                                border: none;
+                            }
+                        }
+                        .panel-heading {
+                            background-color: $black;
+                            color: $white;
+                            a {
+                                font-weight: bold;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
             }
         }
         .landingPage {

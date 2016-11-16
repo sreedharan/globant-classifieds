@@ -1,35 +1,16 @@
-<div class="landingPage" ng-controller="landingController">
+<div class="landingPage" ng-controller="landingController" ng-init="showData()">
+
     <div class="row text-center">
         <div class="col-lg-12 item">
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <a class="blue" href="#"><i class="glyphicon glyphicon-home"></i>
-                <h5>Housing</h5></a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4"><a class="green" href="#"><i class="glyphicon glyphicon-home"></i>
-                <h5>Automotive</h5></a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4"><a class="orange" href="#"><i class="glyphicon glyphicon-home"></i>
-                <h5>Furniture</h5></a>
-            </div>
-        </div>
-    </div>
-    <div class="row text-center">
-        <div class="col-lg-12 item">
-            <div class="col-lg-4 col-md-4 col-sm-4"><a class="black" href="#"><i class="glyphicon glyphicon-home"></i>
-                <h5>Electronics</h5></a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4"><a class="blue" href="#"><i class="glyphicon glyphicon-home"></i>
-                <h5>Household</h5></a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4"><a class="green" href="#"><i class="glyphicon glyphicon-home"></i>
-                <h5>Other</h5></a>
+            <div class="col-lg-4 col-md-4 col-sm-4" ng-repeat="datalist in datalists | limitTo: paginationLimit()">
+                <a class="{{ datalist.color }}" href="#"><i class="glyphicon glyphicon-home"></i>
+                <h5>{{ datalist.name }}</h5></a>
             </div>
         </div>
     </div>
     <div class="row text-center">
         <div class="col-lg-12 viewAll">
-            <a href="#">View All</a>
-
+            <a href="javascript:void(0)" ng-show="hasMoreItemsToShow()" ng-click="showMoreItems()">View All</a>
         </div>
     </div>
 </div>
