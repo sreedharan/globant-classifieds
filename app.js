@@ -18,6 +18,10 @@ app.config(function($routeProvider) {
 
 var headerController = function($scope) {
     $scope.isCollapsedHorizontal = true;
+    $scope.isActive = false;
+    $scope.activeButton = function() {
+        $scope.isActive = !$scope.isActive;
+    }
 }
 
 var accordionController = function($scope) {

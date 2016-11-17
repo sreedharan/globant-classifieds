@@ -29,13 +29,13 @@
                         </li>
                         <li class="pull-right">
                             <ul class="navbar-right">
-                                <li><a href="#"><i class="glyphicon glyphicon-star-empty"></i></a></li>
-                                <li><a href="#">Creating List</a></li>
+                                <li><a href="javascript:void(0)" ng-class="{'active': isActive}" ng-click="activeButton()"><i class="glyphicon glyphicon-star-empty"></i></a></li>
+                                <li><a href="javascript:void(0)">Creating List</a></li>
                                 <li><a href="javascript:void(0)" ng-click="isCollapsedHorizontal = !isCollapsedHorizontal"><i class="glyphicon glyphicon-align-justify"></i></a></li>
                             </ul>
                         </li>
                     </ul>
-                    <div class="horizontal-collapse rightMenu" uib-collapse="isCollapsedHorizontal" horizontal>
+                    <div class="horizontal-collapse rightMenu well well-lg" uib-collapse="isCollapsedHorizontal" horizontal>
 
 
                         <div class="sideMenu" ng-controller="accordionController">
