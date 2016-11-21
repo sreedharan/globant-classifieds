@@ -13,11 +13,6 @@ gulp.task('sass', function() {
         .pipe(reload({ stream: true }))
 });
 
-gulp.task('livereload', function() {
-    connect.server()
-    gulp.watch('./sass/**/*.scss', ['sass']);
-});
-
 gulp.task('scripts', function() {
     gulp.src(['./js/**/*.js', '!./js/**/*.min.js'])
         .pipe(rename({ suffix: '.min' }))
@@ -26,5 +21,11 @@ gulp.task('scripts', function() {
         .pipe(reload({ stream: true }))
 });
 
+gulp.task('connect', function() {
+    connect.server()
+    gulp.watch('./sass/**/*.scss', ['sass']);
+    gulp.watch('./js/**/*.js', ['scripts']);
+});
 
-gulp.task('default', ["sass", "livereload", "scripts"]);
+
+gulp.task('default', ["sass", "connect", "scripts"]);

@@ -1,0 +1,60 @@
+<nav class="navbar header">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="pull-left navbar-header"><a href="#"><i class="logo"></i></a></li>
+            <li>
+                <form class="form-inline float-xs-left">
+                    <input class="form-control" type="text" placeholder="Search">
+                    <i class="glyphicon glyphicon-search"></i>
+                </form>
+            </li>
+            <li class="pull-right">
+                <ul class="navbar-right">
+                    <li><a href="javascript:void(0)" ng-class="{'active': isActive}" ng-click="activeButton()"><i class="glyphicon glyphicon-star-empty"></i></a></li>
+                    <li><a href="javascript:void(0)">Creating List</a></li>
+                    <li><a href="javascript:void(0)" ng-click="isCollapsedHorizontal = !isCollapsedHorizontal"><i class="glyphicon glyphicon-align-justify"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="horizontal-collapse rightMenu well well-lg" uib-collapse="isCollapsedHorizontal" horizontal>
+
+
+            <div class="sideMenu">
+                <uib-accordion close-others="oneAtATime">
+                    <div uib-accordion-group class="panel-default" heading="Listing" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                        <ul>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Automotive</a></li>
+                            <li><a href="#">Furniture</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Household</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                    </div>
+                    <div uib-accordion-group class="panel-default" heading="Carpool">
+                        <ul>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Automotive</a></li>
+                            <li><a href="#">Furniture</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Household</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                    </div>
+                    <div uib-accordion-group class="panel-default" heading="Social">
+                        <ul>
+                            <li><a href="#">Housing</a></li>
+                            <li><a href="#">Automotive</a></li>
+                            <li><a href="#">Furniture</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Household</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                    </div>
+                </uib-accordion>
+            </div>
+
+
+        </div>
+    </div>
+</nav>

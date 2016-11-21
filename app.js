@@ -1,39 +1,48 @@
-var app = angular.module('classifiedsApp', ['ngRoute', 'ui.bootstrap']);
+var app = angular.module('classifiedsApp', ['ui.router', 'ui.bootstrap']);
 
-app.config(function($routeProvider) {
-    $routeProvider
+app.config(function($stateProvider, $urlRouterProvider) {
 
-        .when('/', {
-        templateUrl: 'pages/home.html',
-        controller: 'landingController'
-    })
+    // default route
+    $urlRouterProvider.otherwise("/home");
+    var header = {
+        url: '/header',
+        templateUrl: 'pages/header.html',
+        controller: 'headerController'
 
-    .when('/listing', {
-        templateUrl: 'pages/listing.html',
-        controller: 'listingController'
-    })
+    }
+    var footer = {
+            url: '/footer',
+            templateUrl: 'pages/footer.html',
+            controller: function($scope) {}
 
-    .otherwise({ redirectTo: '/home' });
+        }
+        // ui router states
+    $stateProvider
+        .state('home', {
+            url: "/home",
+            views: {
+                header: header,
+                content: {
+                    templateUrl: 'pages/home.html',
+                    controller: 'landingController'
+                },
+                footer: footer
+            }
+        })
+        .state('listing', {
+            url: "/listing",
+            views: {
+                header: header,
+                content: {
+                    templateUrl: 'pages/listing.html',
+                    controller: 'listingController'
+                },
+                footer: footer
+            }
+        });
+
 });
 
-var headerController = function($scope) {
-    $scope.isCollapsedHorizontal = true;
-    $scope.isActive = false;
-    $scope.activeButton = function() {
-        $scope.isActive = !$scope.isActive;
-    }
-}
-
-var accordionController = function($scope) {
-    $scope.oneAtATime = true;
-    $scope.status = {
-        isFirstOpen: true,
-        isFirstDisabled: false
-    };
-}
-
-app.controller('headerController', headerController);
-app.controller('accordionController', accordionController);
 
 
 
