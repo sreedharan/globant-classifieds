@@ -1,12 +1,15 @@
 # Globant Classifieds
 Initialy Project setup using Gulp.
 
-## Libraries used
-* Angular.js : 1.4
-* Ui-router : 0.2.15
-* ui-Bootstrap : 3.3.6
+## Frameworks used
+* Angular.js : 1.5.8
+* angular-ui-router : 0.3.2
+* angular-bootstrap : 2.2.0
 
 Other libraries are in the bower.json. 
+* bootstrap-sass: 3.3.7
+* jquery: 3.1.1
+
 
 ## Build procedure
 * Global libraries to have in the developer machine:    

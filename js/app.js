@@ -2,7 +2,6 @@ var app = angular.module('classifiedsApp', ['ui.router', 'ui.bootstrap']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-    // default route
     $urlRouterProvider.otherwise("/home");
     var header = {
         url: '/header',
@@ -11,12 +10,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     }
     var footer = {
-            url: '/footer',
-            templateUrl: '../pages/footer.html',
-            controller: function($scope) {}
+        url: '/footer',
+        templateUrl: '../pages/footer.html',
+        controller: function($scope) {}
 
-        }
-        // ui router states
+    }
+
     $stateProvider
         .state('home', {
             url: "/home",
