@@ -13,3 +13,21 @@
 .black {
     background-color: $black;
 }
+
+.viewAll {
+    height: 50px;
+    margin-top: 50px;
+    button {
+        @include border-top-radius(5px);
+        @include border-right-radius(5px);
+        @include border-bottom-radius(5px);
+        @include border-left-radius(5px);
+        background-color: $black;
+        color: $white;
+        padding: 10px 60px;
+        margin: 0 auto;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+    }
+}

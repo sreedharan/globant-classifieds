@@ -9,6 +9,8 @@ Initialy Project setup using Gulp.
 Other libraries are in the bower.json. 
 * bootstrap-sass: 3.3.7
 * jquery: 3.1.1
+* angular-translate": 2.13.0
+* angular-translate-loader-static-files": 2.13.0
 
 
 ## Build procedure
@@ -16,7 +18,9 @@ Other libraries are in the bower.json.
     - npm
     - gulp 
     - bower
-* Run npm install
+	
+	
+* Run npm install (in root folder)
 * Run bower install(In app folder)
 
 ##Run Server

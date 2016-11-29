@@ -1,8 +1,11 @@
 .header {
     background-color: $green;
-    @include border-radius(0);
+    @include border-top-radius(0);
+    @include border-right-radius(0);
+    @include border-bottom-radius(0);
+    @include border-left-radius(0);
     .navbar-nav {
-        width: 100%;
+        @include size(100%, auto);
         text-align: center;
         margin: 0 15px 0 0;
         li {
@@ -17,8 +20,7 @@
                 padding: 0;
                 .logo {
                     background: $logo no-repeat 0 0;
-                    height: 40px;
-                    width: 170px;
+                    @include size(170px, 40px);
                     float: left;
                 }
             }
@@ -26,18 +28,24 @@
         form {
             background-color: $white;
             padding: 0 10px;
-            width: 280px;
-            @include border-radius(5px);
+            @include size(280px, auto);
+            @include border-top-radius(5px);
+            @include border-right-radius(5px);
+            @include border-bottom-radius(5px);
+            @include border-left-radius(5px);
             margin-top: 12px;
             position: relative;
             input {
-                width: 95%;
+                @include size(95%, auto);
                 border: none;
                 padding-left: 0;
-                @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0.5));
-                @include border-radius(0);
+                @include box-shadow(0 0 0 $white);
+                @include border-top-radius(0);
+                @include border-right-radius(0);
+                @include border-bottom-radius(0);
+                @include border-left-radius(0);
                 &:focus {
-                    @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0.5));
+                    @include box-shadow(0 0 0 $white);
                 }
             }
             i {
@@ -79,17 +87,23 @@
         top: 100%;
         background-color: $dark-blue;
         right: 0;
-        width: 200px;
+        @include size(200px, auto);
         color: $white;
-        opacity: 0.9;
-        z-index: 999;
+        @include opacity(0.9);
+        z-index: 1;
         padding: 0;
-        @include border-radius(0);
+        @include border-top-radius(0);
+        @include border-right-radius(0);
+        @include border-bottom-radius(0);
+        @include border-left-radius(0);
         .panel-group {
             margin-bottom: 0;
             .panel {
                 background-color: transparent;
-                @include border-radius(0);
+                @include border-top-radius(0);
+                @include border-right-radius(0);
+                @include border-bottom-radius(0);
+                @include border-left-radius(0);
                 border-left: none;
                 border-right: none;
                 border-top: none;
@@ -101,7 +115,7 @@
                         li {
                             a {
                                 float: left;
-                                width: 100%;
+                                @include size(100%, auto);
                                 padding: 5px 10px;
                                 color: $white;
                                 text-decoration: none;

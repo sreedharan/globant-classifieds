@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Globant Classifieds</title>
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
 </head>
 
 <body ng-app="classifiedsApp">
-    <div class="container">
+    <div ng-controller="translateController" class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div ui-view="header"></div>
@@ -28,11 +29,15 @@
         </div>
     </div>
 
-    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/script.min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script type="text/javascript" src="js/app.min.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
+    <script type="text/javascript" src="js/translate.min.js"></script>
+
 </body>
 
 </html>

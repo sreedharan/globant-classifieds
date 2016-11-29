@@ -1,0 +1,21 @@
+.listingPage {
+    .block {
+        background-color: $green;
+        float: left;
+        @include size(100%, auto);
+        margin: 0 0 20px 0;
+        .listImage {
+            @include size(100%, auto);
+            margin-top: 15px;
+            i {
+                background: $white $listingImage no-repeat 0 0;
+                background-size: 140px, 140px;
+                @include size(100%, 120px);
+                float: left;
+            }
+        }
+    }
+    .trendingListings {
+        background-color: $grey;
+    }
+}

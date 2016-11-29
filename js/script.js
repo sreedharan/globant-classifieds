@@ -14,35 +14,11 @@ app.controller("headerController", ['$scope', function($scope) {
 }]);
 
 
+app.controller("footerController", ['$scope', function($scope) {}]);
+
+
 app.controller("landingController", ['$scope', function($scope) {
     $scope.showData = function() {
-        $scope.datalists = [
-            { "name": "Housing", "color": "blue" },
-            { "name": "Automotive", "color": "green" },
-            { "name": "Furniture", "color": "orange" },
-            { "name": "Electronics", "color": "black" },
-            { "name": "Household", "color": "blue" },
-            { "name": "Other", "color": "green" },
-            { "name": "Housing", "color": "blue" },
-            { "name": "Automotive", "color": "green" },
-            { "name": "Furniture", "color": "orange" },
-            { "name": "Electronics", "color": "black" },
-            { "name": "Household", "color": "blue" },
-            { "name": "Other", "color": "green" },
-            { "name": "Housing", "color": "blue" },
-            { "name": "Automotive", "color": "green" },
-            { "name": "Furniture", "color": "orange" },
-            { "name": "Electronics", "color": "black" },
-            { "name": "Household", "color": "blue" },
-            { "name": "Other", "color": "green" },
-            { "name": "Housing", "color": "blue" },
-            { "name": "Automotive", "color": "green" },
-            { "name": "Furniture", "color": "orange" },
-            { "name": "Electronics", "color": "black" },
-            { "name": "Household", "color": "blue" },
-            { "name": "Other", "color": "green" }
-        ]
-
         var pagesShown = 2;
         var pageSize = 3;
 
@@ -58,4 +34,32 @@ app.controller("landingController", ['$scope', function($scope) {
 
 
     }
+}]);
+
+app.controller("listingController", ['$scope', function($scope) {}]);
+
+
+app.controller("DropdownCtrl", ['$scope', function($scope) {
+
+    $scope.items = [
+        'The first choice!',
+        'And another choice for you.',
+        'but wait! A third!'
+    ];
+
+    $scope.status = {
+        isopen: false
+    };
+
+    $scope.toggled = function(open) {
+        $log.log('Dropdown is now: ', open);
+    };
+
+    $scope.toggleDropdown = function($event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        $scope.status.isopen = !$scope.status.isopen;
+    };
+
+    $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
 }]);

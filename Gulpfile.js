@@ -49,9 +49,9 @@ gulp.task('watch', function() {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./js/**/*.js', ['scripts']);
     gulp.watch('./css/**/*.css', ['style']);
+    gulp.watch('./images/**/*.images', ['images']);
 
 });
-
 
 
 gulp.task('default', ["sass", "watch", "scripts", "style", "browser-sync", "images"]);

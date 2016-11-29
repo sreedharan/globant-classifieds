@@ -2,15 +2,15 @@
 
     <div class="row text-center">
         <div class="col-lg-12 item">
-            <div class="col-lg-4 col-md-4 col-sm-4" ng-repeat="datalist in datalists | limitTo: paginationLimit()">
-                <span><a href="#"><h5><i class="glyphicon glyphicon-home {{ datalist.color }}"></i></h5>
-                <h5>{{ datalist.name }}</h5></a></span>
+            <div class="col-lg-4 col-md-4 col-sm-4" ng-repeat="item in listing | limitTo: paginationLimit()">
+                <span><a href="#"><h5><i class="glyphicon glyphicon-home {{ item.color }}"></i></h5>
+                <h5>{{ item.name }}</h5></a></span>
             </div>
         </div>
     </div>
     <div class="row text-center">
         <div class="col-lg-12 viewAll">
-            <a href="javascript:void(0)" ng-show="hasMoreItemsToShow()" ng-click="showMoreItems()">View All</a>
+            <button ng-show="hasMoreItemsToShow()" ng-click="showMoreItems()" translate="viewAll"></button>
         </div>
     </div>
 </div>
