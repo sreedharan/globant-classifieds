@@ -14,29 +14,12 @@ app.config(['$translateProvider',
 
 
         $translateProvider.preferredLanguage('en');
-        // $translateProvider.use('de');
-
         $translateProvider.fallbackLanguage("sp");
     }
 ]);
 
 app.controller('translateController', ['$scope', '$translate',
     function($scope, $translate) {
-        $scope.listing = [
-            { "name": "Housing", "color": "blue" },
-            { "name": "Automotive", "color": "green" },
-            { "name": "Furniture", "color": "orange" },
-            { "name": "Electronics", "color": "black" },
-            { "name": "Household", "color": "blue" },
-            { "name": "Other", "color": "green" },
-            { "name": "Housing", "color": "blue" },
-            { "name": "Automotive", "color": "green" },
-            { "name": "Furniture", "color": "orange" },
-            { "name": "Electronics", "color": "black" },
-            { "name": "Household", "color": "blue" },
-            { "name": "Other", "color": "green" }
-        ];
-
         $scope.switchLanguage = function(key) {
             $translate.use(key);
         };

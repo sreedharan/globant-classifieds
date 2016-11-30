@@ -98,85 +98,21 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <h5 class="text-right"><strong>34 Listings</strong></h5>
+                    <h5 class="text-right"><strong>34 {{ 'listing' | translate }}</strong></h5>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-9">
-
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
-                            <div class="col-lg-3">
-                                <div class="block">
-                                    <div class="col-lg-12 listImage"><i></i></div>
+                            <div class="col-lg-3" ng-repeat="item in listItems">
+                                <div class="block {{item.color}}">
+                                    <div class="col-lg-12 listImage"><img src="{{item.listImage}}"></div>
                                     <div class="col-lg-12">
-                                        <h5 class="pull-left">Title</h5>
-                                        <h5 class="pull-right">INR 000000</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="block">
-                                    <div class="col-lg-12 listImage"><i></i></div>
-                                    <div class="col-lg-12">
-                                        <h5 class="pull-left">Title</h5>
-                                        <h5 class="pull-right">INR 000000</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="block">
-                                    <div class="col-lg-12 listImage"><i></i></div>
-                                    <div class="col-lg-12">
-                                        <h5 class="pull-left">Title</h5>
-                                        <h5 class="pull-right">INR 000000</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="block">
-                                    <div class="col-lg-12 listImage"><i></i></div>
-                                    <div class="col-lg-12">
-                                        <h5 class="pull-left">Title</h5>
-                                        <h5 class="pull-right">INR 000000</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="block">
-                                    <div class="col-lg-12 listImage"><i></i></div>
-                                    <div class="col-lg-12">
-                                        <h5 class="pull-left">Title</h5>
-                                        <h5 class="pull-right">INR 000000</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="block">
-                                    <div class="col-lg-12 listImage"><i></i></div>
-                                    <div class="col-lg-12">
-                                        <h5 class="pull-left">Title</h5>
-                                        <h5 class="pull-right">INR 000000</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="block">
-                                    <div class="col-lg-12 listImage"><i></i></div>
-                                    <div class="col-lg-12">
-                                        <h5 class="pull-left">Title</h5>
-                                        <h5 class="pull-right">INR 000000</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="block">
-                                    <div class="col-lg-12 listImage"><i></i></div>
-                                    <div class="col-lg-12">
-                                        <h5 class="pull-left">Title</h5>
-                                        <h5 class="pull-right">INR 000000</h5>
+                                        <h5 class="pull-left">{{item.title}}</h5>
+                                        <h5 class="pull-right">{{item.price}}</h5>
                                     </div>
                                 </div>
                             </div>
@@ -187,23 +123,14 @@
             <div class="col-lg-3">
                 <div class="row">
                     <div class="col-lg-12 trendingListings">
-                        <h5>Trending Listings</h5>
+                        <h5 translate="trendingListing"></h5>
                         <div class="row">
-                            <div class="col-lg-12">
-                                <div class="block">
-                                    <div class="col-lg-12 listImage"><i></i></div>
+                            <div class="col-lg-12" ng-repeat="item in trendingListing">
+                                <div class="block {{item.color}}">
+                                    <div class="col-lg-12 listImage"><img src="{{item.listImage}}"></div>
                                     <div class="col-lg-12">
-                                        <h5 class="pull-left">Title</h5>
-                                        <h5 class="pull-right">INR 000000</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="block">
-                                    <div class="col-lg-12 listImage"><i></i></div>
-                                    <div class="col-lg-12">
-                                        <h5 class="pull-left">Title</h5>
-                                        <h5 class="pull-right">INR 000000</h5>
+                                        <h5 class="pull-left">{{item.title}}</h5>
+                                        <h5 class="pull-right">{{item.price}}</h5>
                                     </div>
                                 </div>
                             </div>
