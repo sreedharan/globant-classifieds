@@ -6,6 +6,7 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var cssmin = require('gulp-cssmin');
 var imagemin = require('gulp-imagemin');
+var jsonmin = require('gulp-jsonmin');
 
 
 gulp.task('browser-sync', function() {
@@ -45,13 +46,19 @@ gulp.task('scripts', function() {
         .pipe(reload({ stream: true }))
 });
 
+gulp.task('json', function() {
+    gulp.src('./js/json/**/*.json')
+        .pipe(jsonmin())
+        .pipe(gulp.dest('./app/js/json'));
+});
+
 gulp.task('watch', function() {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./js/**/*.js', ['scripts']);
     gulp.watch('./css/**/*.css', ['style']);
     gulp.watch('./images/**/*.images', ['images']);
+    gulp.watch('./js/json/**/*.json', ['json']);
 
 });
 
-
-gulp.task('default', ["sass", "watch", "scripts", "style", "browser-sync", "images"]);
+gulp.task('default', ["sass", "watch", "scripts", "style", "browser-sync", "images", "json"]);

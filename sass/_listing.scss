@@ -3,6 +3,7 @@
         float: left;
         @include size(100%, auto);
         margin: 0 0 20px 0;
+        @include box-shadow(1px 0 5px $black);
         .listImage {
             @include size(100%, auto);
             margin-top: 15px;
@@ -11,6 +12,9 @@
                 background-color: $white;
                 @include size(100%, 120px);
             }
+        }
+        h5 {
+            color: $white;
         }
     }
     .trendingListings {

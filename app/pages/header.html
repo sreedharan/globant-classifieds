@@ -23,35 +23,35 @@
                 </ul>
             </li>
         </ul>
-        <div class="horizontal-collapse rightMenu well well-lg" uib-collapse="isCollapsedHorizontal" horizontal>
+        <div class="horizontal-collapse rightMenu" uib-collapse="isCollapsedHorizontal" horizontal>
 
 
-            <div class="sideMenu">
-                <uib-accordion close-others="oneAtATime">
-                    <div uib-accordion-group class="panel-default" heading="Listing" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                        <ul>
-                            <li ng-repeat="item in listing">
-                                <a href="#">{{item.name}}</a>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div uib-accordion-group class="panel-default" heading="Carpool">
-                        <ul>
-                            <li ng-repeat="item in listing">
-                                <a href="#">{{item.name}}</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div uib-accordion-group class="panel-default" heading="Social">
-                        <ul>
-                            <li ng-repeat="item in listing">
-                                <a href="#">{{item.name}}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </uib-accordion>
-            </div>
+            <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default" heading="Listing" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                    <ul>
+                        <li ng-repeat="item in listing">
+                            <a href="#">{{item.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div uib-accordion-group class="panel-default" heading="Carpool">
+                    <ul>
+                        <li ng-repeat="item in listing">
+                            <a href="#">{{item.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div uib-accordion-group class="panel-default" heading="Social">
+                    <ul>
+                        <li ng-repeat="item in listing">
+                            <a href="#">{{item.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </uib-accordion>
+
 
 
         </div>

@@ -9,8 +9,9 @@ Initialy Project setup using Gulp.
 Other libraries are in the bower.json. 
 * bootstrap-sass: 3.3.7
 * jquery: 3.1.1
-* angular-translate": 2.13.0
-* angular-translate-loader-static-files": 2.13.0
+* angular-translate: 2.13.0
+* angular-translate-loader-static-files: 2.13.0
+* angular-animate: 1.5.9
 
 
 ## Build procedure

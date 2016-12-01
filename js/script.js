@@ -1,5 +1,7 @@
 var app = angular.module('classifiedsApp');
 
+// header page controller
+
 app.controller("headerController", ['$scope', function($scope) {
 
     $scope.listing = [
@@ -23,10 +25,10 @@ app.controller("headerController", ['$scope', function($scope) {
     };
 }]);
 
-
+// footer page controller
 app.controller("footerController", ['$scope', function($scope) {}]);
 
-
+// home page controller
 app.controller("landingController", ['$scope', function($scope) {
     $scope.listing = [
         { "name": "Housing", "color": "blue" },
@@ -62,32 +64,58 @@ app.controller("landingController", ['$scope', function($scope) {
     }
 }]);
 
+
+// listing page controller
 app.controller("listingController", ['$scope', function($scope) {
-    $scope.listItems = [
-        { "listImage": "../images/product-item.png", "color": "green", "title": "title", "price": "011110" },
-        { "listImage": "../images/product-item.png", "color": "orange", "title": "title", "price": "011110" },
-        { "listImage": "../images/product-item.png", "color": "black", "title": "title", "price": "011110" },
-        { "listImage": "../images/product-item.png", "color": "green", "title": "title", "price": "011110" },
-        { "listImage": "../images/product-item.png", "color": "orange", "title": "title", "price": "011110" },
-        { "listImage": "../images/product-item.png", "color": "black", "title": "title", "price": "011110" },
-        { "listImage": "../images/product-item.png", "color": "green", "title": "title", "price": "011110" },
-        { "listImage": "../images/product-item.png", "color": "orange", "title": "title", "price": "011110" },
-        { "listImage": "../images/product-item.png", "color": "black", "title": "title", "price": "011110" }
+    //drop down
+    $scope.automotive = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
     ];
-    $scope.trendingListing = [
-        { "listImage": "../images/product-item.png", "color": "green", "title": "title", "price": "011110" },
-        { "listImage": "../images/product-item.png", "color": "orange", "title": "title", "price": "011110" },
-        { "listImage": "../images/product-item.png", "color": "black", "title": "title", "price": "011110" },
+    $scope.cars = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
     ];
-}]);
-
-
-app.controller("DropdownCtrl", ['$scope', function($scope) {
-
-    $scope.items = [
-        'The first choice!',
-        'And another choice for you.',
-        'but wait! A third!'
+    $scope.type = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+    $scope.brand = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+    $scope.year = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+    $scope.fuelType = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+    $scope.kmDriven = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
     ];
 
     $scope.status = {
@@ -105,4 +133,63 @@ app.controller("DropdownCtrl", ['$scope', function($scope) {
     };
 
     $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
+
+
+    //list items
+    $scope.listItems = [
+        { "listImage": "../images/product-item.png", "color": "green", "title": "Title", "price": "011110" },
+        { "listImage": "../images/product-item.png", "color": "orange", "title": "Title", "price": "011110" },
+        { "listImage": "../images/product-item.png", "color": "black", "title": "Title", "price": "011110" },
+        { "listImage": "../images/product-item.png", "color": "green", "title": "Title", "price": "011110" },
+        { "listImage": "../images/product-item.png", "color": "orange", "title": "Title", "price": "011110" },
+        { "listImage": "../images/product-item.png", "color": "black", "title": "Title", "price": "011110" },
+        { "listImage": "../images/product-item.png", "color": "green", "title": "Title", "price": "011110" },
+        { "listImage": "../images/product-item.png", "color": "orange", "title": "Title", "price": "011110" }
+
+    ];
+    $scope.trendingListing = [
+        { "listImage": "../images/product-item.png", "color": "green", "title": "Title", "price": "011110" },
+        { "listImage": "../images/product-item.png", "color": "orange", "title": "Title", "price": "011110" }
+
+    ];
+}]);
+
+
+// create listing page controller
+app.controller("createListingController", ['$scope', function($scope) {
+
+    //accordion
+    $scope.oneAtATime = true;
+
+    $scope.groups = [{
+            title: 'Step - 1',
+            content: 'step 1 content'
+        },
+        {
+            title: 'Step - 2',
+            content: 'step 2 content'
+        },
+        {
+            title: 'Step - 3',
+            content: 'step 3 content'
+        },
+        {
+            title: 'Step - 4',
+            content: 'step 4 content'
+        }
+
+    ];
+
+    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
+
+    $scope.addItem = function() {
+        var newItemNo = $scope.items.length + 1;
+        $scope.items.push('Item ' + newItemNo);
+    };
+
+    $scope.status = {
+        isCustomHeaderOpen: false,
+        isFirstOpen: true,
+        isFirstDisabled: false
+    };
 }]);
