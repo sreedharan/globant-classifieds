@@ -162,26 +162,23 @@ app.controller("createListingController", ['$scope', function($scope) {
     $scope.oneAtATime = true;
 
     $scope.stepOne = [{
-        title: 'Step 1',
-        content: 'content - 1'
+        'title': 'Step 1',
+        'content': 'content - 1'
     }];
     $scope.stepTwo = [{
-        title: 'Step 2',
-        content: 'content - 1'
+        'title': 'Step 2',
+        'content': 'content - 2'
     }];
     $scope.stepThree = [{
-        title: 'Step 3',
-        content: 'content - 1'
+        'title': 'Step 3',
+        'content': 'content - 3'
     }];
     $scope.stepFour = [{
-        title: 'Step 4',
-        content: 'content - 1'
+        'title': 'Step 4',
+        'content': 'content - 4'
     }];
 
-    $scope.addItem = function() {
-        var newItemNo = $scope.items.length + 1;
-        $scope.items.push('Item ' + newItemNo);
-    };
+
 
     $scope.status = {
         isFirstOpen: true,
