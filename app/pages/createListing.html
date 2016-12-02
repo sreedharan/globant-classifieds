@@ -2,7 +2,16 @@
     <div class="col-lg-12">
         <div class="col-md-10 col-md-offset-1">
             <uib-accordion close-others="oneAtATime">
-                <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in groups" is-open="status">
+                <div uib-accordion-group class="panel-default" heading="{{item.title}}" ng-repeat="item in stepOne" is-open="status">
+                    {{item.content}}
+                </div>
+                <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in stepTwo">
+                    {{group.content}}
+                </div>
+                <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in stepThree">
+                    {{group.content}}
+                </div>
+                <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in stepFour">
                     {{group.content}}
                 </div>
             </uib-accordion>

@@ -5,5 +5,14 @@
     "footerText": "Footer text-sp",
     "viewAll": "View All-sp",
     "trendingListing": "Trending Listing -sp",
-    "listing": "Listing-sp"
+    "listing": "Listing-sp",
+    "automotive": "Automotive-sp",
+    "cars": "Cars-sp",
+    "type": "Type-sp",
+    "brand": "Brand-sp",
+    "year": "Year-sp",
+    "fuelType": "Fuel type-sp",
+    "kmDriven": "Km Driven-sp",
+    "carpool": "Carpool-sp",
+    "social": "Social-sp"
 }

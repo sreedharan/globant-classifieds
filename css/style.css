@@ -3764,6 +3764,14 @@ tbody.collapse.in {
 .affix {
   position: fixed; }
 
+body {
+  font-family: "roboto", Helvetica, Arial, sans-serif; }
+  body .container {
+    background: url("../images/body-bg.png") repeat 0 0;
+    -webkit-box-shadow: 1px 0 5px #46616c;
+    box-shadow: 1px 0 5px #46616c;
+    padding: 0; }
+
 .blue {
   background-color: #673ab7; }
 
@@ -3799,13 +3807,40 @@ tbody.collapse.in {
 strong {
   font-weight: bold; }
 
-body {
-  font-family: "roboto", Helvetica, Arial, sans-serif; }
-  body .container {
-    background: url("../images/body-bg.png") repeat 0 0;
-    -webkit-box-shadow: 1px 0 5px #46616c;
-    box-shadow: 1px 0 5px #46616c;
-    padding: 0; }
+.checkboxNew input[type=checkbox] {
+  display: none; }
+  .checkboxNew input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    font-size: 11px;
+    text-align: center;
+    line-height: 10px;
+    font-weight: bold; }
+
+.checkboxNew label {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  line-height: 16px;
+  font-weight: normal;
+  text-align: left; }
+  .checkboxNew label:before {
+    border: 2px solid #7eb61f;
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 2px; }
+  .checkboxNew label a {
+    color: #46616c;
+    text-decoration: none;
+    font-size: 13px;
+    position: relative;
+    top: 0; }
 
 .header {
   background-color: #7eb61f;

@@ -1,8 +1,0 @@
-body {
-    font-family: "roboto", Helvetica, Arial, sans-serif;
-    .container {
-        background: $body-bg repeat 0 0;
-        @include box-shadow(1px 0 5px $black);
-        padding: 0;
-    }
-}

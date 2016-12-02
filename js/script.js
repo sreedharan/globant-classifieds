@@ -161,26 +161,22 @@ app.controller("createListingController", ['$scope', function($scope) {
     //accordion
     $scope.oneAtATime = true;
 
-    $scope.groups = [{
-            title: 'Step - 1',
-            content: 'step 1 content'
-        },
-        {
-            title: 'Step - 2',
-            content: 'step 2 content'
-        },
-        {
-            title: 'Step - 3',
-            content: 'step 3 content'
-        },
-        {
-            title: 'Step - 4',
-            content: 'step 4 content'
-        }
-
-    ];
-
-    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
+    $scope.stepOne = [{
+        title: 'Step 1',
+        content: 'content - 1'
+    }];
+    $scope.stepTwo = [{
+        title: 'Step 2',
+        content: 'content - 1'
+    }];
+    $scope.stepThree = [{
+        title: 'Step 3',
+        content: 'content - 1'
+    }];
+    $scope.stepFour = [{
+        title: 'Step 4',
+        content: 'content - 1'
+    }];
 
     $scope.addItem = function() {
         var newItemNo = $scope.items.length + 1;
@@ -188,7 +184,6 @@ app.controller("createListingController", ['$scope', function($scope) {
     };
 
     $scope.status = {
-        isCustomHeaderOpen: false,
         isFirstOpen: true,
         isFirstDisabled: false
     };
