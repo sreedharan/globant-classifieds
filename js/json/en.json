@@ -14,5 +14,12 @@
     "fuelType": "Fuel type",
     "kmDriven": "Km Driven",
     "carpool": "Carpool",
-    "social": "Social"
+    "social": "Social",
+    "iWantTo": "I want to :",
+    "sell": "Sell",
+    "rent": "Rent",
+    "negotiable": "Negotiable",
+    "publish": "Publish",
+    "saveAndClose": "Save and Close",
+    "similarListing": "Similar Listing"
 }

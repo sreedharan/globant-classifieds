@@ -1,20 +1,116 @@
-<div class="row" ng-controller="createListingController">
-    <div class="col-lg-12">
-        <div class="col-md-10 col-md-offset-1">
-            <uib-accordion close-others="oneAtATime">
-                <div uib-accordion-group class="panel-default" heading="{{item.title}}" ng-repeat="item in stepOne" is-open="status">
-                    {{item.content}}
+<div class="row createListing" ng-controller="createListingController">
+    <div class="col-lg-9">
+        <div class="col-lg-12">
+            <form id="" action="" method="">
+                <uib-accordion close-others="oneAtATime">
+                    <div uib-accordion-group class="panel-default" heading="{{item.title}}" ng-repeat="item in stepOne" is-open="status">
+                        <h5 class="checkboxNew">{{'iWantTo' | translate}}
+                            <input type="checkbox" id="sell" name="sell" />
+                            <label for="sell">{{'sell' | translate}}</label>
+                            <input type="checkbox" id="rent" name="rent" />
+                            <label for="rent">{{'rent' | translate}}</label>
+                        </h5>
+                        <div class="col-lg-2 col-md-2 col-sm-2 listItem" ng-repeat="item in listing">
+                            <span><a ui-sref="#"><h5><i class="glyphicon glyphicon-home {{ item.color }}"></i></h5>
+                <h5>{{ item.name }}</h5></a></span>
+                        </div>
+                    </div>
+                    <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in stepTwo">
+                        <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this)" />
+                    </div>
+                    <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in stepThree">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="col-lg-12 mar-t-b-10">
+                                    <input type="text" name="input" ng-model="" ng-pattern="" required ng-trim="false" placeholder="Short description">
+                                </div>
+                                <div class="col-lg-6 mar-t-b-10">
+                                    <div class="btn-group" uib-dropdown>
+                                        <button id="type" type="button" class="btn btn-primary" uib-dropdown-toggle>
+              {{'type' | translate}} <span class="caret"></span>
+            </button>
+                                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="type">
+                                            <li ng-repeat="item in type">
+                                                <a href>{{item}}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mar-t-b-10">
+                                    <div class="btn-group" uib-dropdown>
+                                        <button id="brand" type="button" class="btn btn-primary" uib-dropdown-toggle>
+              {{'brand' | translate}} <span class="caret"></span>
+            </button>
+                                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="brand">
+                                            <li ng-repeat="item in brand">
+                                                <a href>{{item}}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mar-t-b-10">
+                                    <input type="text" name="input" ng-model="" ng-pattern="" required ng-trim="false" placeholder="Year">
+                                </div>
+                                <div class="col-lg-6 mar-t-b-10">
+                                    <div class="btn-group" uib-dropdown>
+                                        <button id="fuelType" type="button" class="btn btn-primary" uib-dropdown-toggle>
+              {{'fuelType' | translate}} <span class="caret"></span>
+            </button>
+                                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="fuelType">
+                                            <li ng-repeat="item in fuelType">
+                                                <a href>{{item}}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="col-lg-12 mar-t-b-10">
+                                    <input type="text" name="price" ng-model="" ng-pattern="" required ng-trim="false" placeholder="Price">
+                                </div>
+                                <div class="col-lg-12">
+                                    <h5 class="checkboxNew pull-right">
+                                        <input type="checkbox" id="negotiable" name="negotiable" />
+                                        <label for="negotiable">{{'negotiable' | translate}}</label>
+                                    </h5>
+                                </div>
+                                <div class="col-lg-12 mar-t-b-10">
+                                    <input type="text" name="model" ng-model="" ng-pattern="" required ng-trim="false" placeholder="Model">
+                                </div>
+                                <div class="col-lg-12 mar-t-b-10">
+                                    <input type="text" name="kmDriven" ng-model="" ng-pattern="" required ng-trim="false" placeholder="Km Driven">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in stepFour">
+                        <h5 class="checkboxNew">
+                            <input type="checkbox" id="lorem" name="lorem" />
+                            <label for="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pellentesque, neque sit amet aliquet egestas.</label>
+                        </h5>
+                    </div>
+                </uib-accordion>
+                <div class="col-lg-12 viewAll">
+                    <button translate="publish"></button>
+                    <button translate="saveAndClose"></button>
                 </div>
-                <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in stepTwo">
-                    {{group.content}}
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="col-lg-12 trendingListings">
+            <h5 translate="similarListing"></h5>
+            <div class="row">
+                <div class="col-lg-12" ng-repeat="item in similarListing">
+                    <div class="block {{item.color}}">
+                        <div class="col-lg-12 listImage"><img src="{{item.listImage}}"></div>
+                        <div class="col-lg-12">
+                            <h5 class="pull-left">{{item.title}}</h5>
+                            <h5 class="pull-right">{{item.price}}</h5>
+                        </div>
+                    </div>
                 </div>
-                <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in stepThree">
-                    {{group.content}}
-                </div>
-                <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in stepFour">
-                    {{group.content}}
-                </div>
-            </uib-accordion>
+            </div>
         </div>
     </div>
 </div>

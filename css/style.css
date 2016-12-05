@@ -3784,6 +3784,10 @@ body {
 .black {
   background-color: #46616c; }
 
+.mar-t-b-10 {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
 .viewAll {
   height: 50px;
   margin-top: 50px; }
@@ -4035,6 +4039,59 @@ strong {
     color: #FFFFFF; }
 
 .listingPage .trendingListings {
+  background-color: #dcdcdc; }
+
+.createListing .listItem span {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 1px 0 5px #46616c;
+  box-shadow: 1px 0 5px #46616c;
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+  .createListing .listItem span a {
+    color: #46616c;
+    text-decoration: none;
+    font-weight: bold; }
+    .createListing .listItem span a i {
+      border-top-right-radius: 50%;
+      border-top-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+      border-bottom-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      border-top-left-radius: 50%;
+      font-size: 22px;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+      color: #FFFFFF;
+      margin-bottom: 15px; }
+
+.createListing .block {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin: 0 0 20px 0;
+  -webkit-box-shadow: 1px 0 5px #46616c;
+  box-shadow: 1px 0 5px #46616c; }
+  .createListing .block .listImage {
+    width: 100%;
+    height: auto;
+    margin-top: 15px; }
+    .createListing .block .listImage img {
+      background-size: 140px, 140px;
+      background-color: #FFFFFF;
+      width: 100%;
+      height: 120px; }
+  .createListing .block h5 {
+    color: #FFFFFF; }
+
+.createListing .trendingListings {
   background-color: #dcdcdc; }
 
 .footer {

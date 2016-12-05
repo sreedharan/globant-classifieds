@@ -14,5 +14,12 @@
     "fuelType": "Fuel type-sp",
     "kmDriven": "Km Driven-sp",
     "carpool": "Carpool-sp",
-    "social": "Social-sp"
+    "social": "Social-sp",
+    "iWantTo": "I want to :-sp",
+    "sell": "Sell-sp",
+    "rent": "Rent-sp",
+    "negotiable": "Negotiable-sp",
+    "publish": "Publish-sp",
+    "saveAndClose": "Save and Close-sp",
+    "similarListing": "Similar Listing-sp"
 }

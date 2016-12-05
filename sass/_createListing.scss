@@ -1,0 +1,51 @@
+.createListing {
+    .listItem {
+        span {
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 0;
+            margin-bottom: 30px;
+            @include box-shadow(1px 0 5px $black);
+            @include opacity(0.8);
+            a {
+                color: $black;
+                text-decoration: none;
+                font-weight: bold;
+                i {
+                    @include border-top-radius(50%);
+                    @include border-right-radius(50%);
+                    @include border-bottom-radius(50%);
+                    @include border-left-radius(50%);
+                    font-size: 22px;
+                    @include size(50px, 50px);
+                    padding: 13px;
+                    color: $white;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    .block {
+        float: left;
+        @include size(100%, auto);
+        margin: 0 0 20px 0;
+        @include box-shadow(1px 0 5px $black);
+        .listImage {
+            @include size(100%, auto);
+            margin-top: 15px;
+            img {
+                background-size: 140px, 140px;
+                background-color: $white;
+                @include size(100%, 120px);
+            }
+        }
+        h5 {
+            color: $white;
+        }
+    }
+    .trendingListings {
+        background-color: $grey;
+    }
+}

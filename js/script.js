@@ -184,4 +184,91 @@ app.controller("createListingController", ['$scope', function($scope) {
         isFirstOpen: true,
         isFirstDisabled: false
     };
+
+    //item one
+    $scope.listing = [
+        { "name": "Housing", "color": "blue" },
+        { "name": "Automotive", "color": "green" },
+        { "name": "Furniture", "color": "orange" },
+        { "name": "Electronics", "color": "black" },
+        { "name": "Household", "color": "blue" },
+        { "name": "Other", "color": "green" }
+
+    ];
+
+    //drop down
+
+    $scope.automotive = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+    $scope.cars = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+    $scope.type = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+    $scope.brand = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+    $scope.year = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+    $scope.fuelType = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+    $scope.kmDriven = [
+        'Housing',
+        'Furniture',
+        'Electronics',
+        'Household',
+        'Other'
+    ];
+
+    $scope.status = {
+        isopen: false
+    };
+
+    $scope.toggled = function(open) {
+        $log.log('Dropdown is now: ', open);
+    };
+
+    $scope.toggleDropdown = function($event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        $scope.status.isopen = !$scope.status.isopen;
+    };
+
+    $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
+
+    //right panel
+    $scope.similarListing = [
+        { "listImage": "../images/product-item.png", "color": "green", "title": "Title", "price": "011110" },
+        { "listImage": "../images/product-item.png", "color": "orange", "title": "Title", "price": "011110" }
+
+    ];
+
 }]);
